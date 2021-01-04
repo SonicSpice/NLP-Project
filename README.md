@@ -15,6 +15,7 @@
 2. Prod build/serve script is `npm run start:prod`. This uses webpack to build the prod dist/ files and then uses local live-server to launch dist/ in browser.
 
 Note: Both dev/prod scripts will run the same backend-server process using nodemon.
+Note: The backend-server express will read SERVER_PORT from a .env file.
 
 # Primary Project Dependencies
 
