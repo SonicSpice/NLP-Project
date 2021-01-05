@@ -13,7 +13,7 @@ const button = document.getElementById("submit-btn");
 
 form.addEventListener("submit", onFormSubmit);
 function onFormSubmit(event) {
-  handleSubmit(event, url.value);
+  Client.handleSubmit(event, url.value);
 }
 
 function handleSubmit(event, url) {

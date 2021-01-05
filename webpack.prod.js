@@ -8,6 +8,7 @@ module.exports = {
   entry: "./src/client/index.js",
   mode: "production",
   stats: { children: false },
+  output: { libraryTarget: "var", library: "Client" },
   module: {
     rules: [
       {

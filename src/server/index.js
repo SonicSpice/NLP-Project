@@ -3,13 +3,18 @@ const express = require("express");
 const fetch = require("node-fetch");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const path = require("path");
 
 dotenv.config();
 const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static("website"));
+app.use(express.static("dist"));
+
+app.get("/", function (req, res) {
+  res.sendFile(path.resolve("dist/index.html"));
+});
 
 // designates what port the app will listen to for incoming requests
 app.listen(process.env.SERVER_PORT, function () {
